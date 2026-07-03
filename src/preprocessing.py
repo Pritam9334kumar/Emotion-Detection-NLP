@@ -1,17 +1,15 @@
 import string
-import nltk
-from nltk.corpus import stopwords
+
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 
-try:
-    stop_words = set(stopwords.words("english"))
-
-except:
-    nltk.download("stopwords")
-    stop_words = set(stopwords.words("english"))
+stop_words = set(ENGLISH_STOP_WORDS)
 
 
 def clean_text(text):
+
+    if not isinstance(text, str):
+        text = "" if text is None else str(text)
 
     text = text.lower()
 
