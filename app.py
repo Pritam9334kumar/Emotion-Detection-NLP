@@ -67,7 +67,7 @@ CLASS_LABELS = {
     3: "love",
     4: "sadness",
     5: "surprise",
-}
+}  
 
 
 def normalize_emotion_label(emotion):
